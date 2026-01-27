@@ -15,8 +15,14 @@
     --transition: all 0.3s ease;
 }
 
-/* Reset básico */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* --- RESET GERAL & REMOÇÃO DO AZUL NO MOBILE --- */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+    /* ESSA LINHA ABAIXO TIRA O AZUL DO CLIQUE NO CELULAR */
+    -webkit-tap-highlight-color: transparent; 
+}
 
 body { 
     font-family: 'Roboto', sans-serif; 
@@ -293,8 +299,7 @@ footer { text-align: center; margin-top: 50px; padding-bottom: 30px; color: var(
     
     .card { padding: 25px 20px; }
     
-    /* Grid de notas: 2 colunas para economizar altura, ou 1 para largura total */
-    /* Aqui, 2 colunas funcionam bem para mobile (2x2) */
+    /* Grid de notas: 2 colunas para economizar altura */
     .scale-options { grid-template-columns: 1fr 1fr; } 
     
     /* Otimização dos botões para mobile */
@@ -304,6 +309,6 @@ footer { text-align: center; margin-top: 50px; padding-bottom: 30px; color: var(
 
 @media (max-width: 480px) {
     /* Tela muito pequena: mantém 1 coluna se preferir, ou 2 colunas */
-    .scale-options { grid-template-columns: 1fr; } /* Pilha vertical segura */
+    .scale-options { grid-template-columns: 1fr; } 
     .brand-logo { height: 35px; }
 }
